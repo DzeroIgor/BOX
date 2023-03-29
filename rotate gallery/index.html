@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #1b1b1b;
+        }
+       .div-one {             
+            display: flex; 
+            width: 90%;
+            justify-content: center;
+            margin: auto;
+        }
+        .div-two {             
+            display: flex; 
+            width: 100%;
+            justify-content: center;
+        }
+        img {
+            width: 250px;
+            border: 20px solid #fff;
+            margin: 0 -147px;
+        }
+        .gallery {
+            margin-top: 150px;
+            text-align: center;             
+        }
+        .i-1 {
+            transform: rotate(-40deg);
+            /* border-color: #999999; */
+            filter: brightness(60%);
+        }
+        .i-2 {
+            transform: rotate(-20deg);
+            /* border-color: #b3b3b3; */
+            filter: brightness(70%);
+        }
+        .i-3 {
+            transform: rotate(0deg);
+            /* border-color: #cccccc; */
+            filter: brightness(80%);
+        }
+        .i-4 {
+            transform: rotate(20deg);
+            /* border-color: #e6e6e6; */
+            filter: brightness(90%)
+        }
+        .i-5 {
+            transform: rotate(40deg);
+            filter: brightness(100%);
+        }
+
+        .i-11 {
+            transform: rotate(40deg);
+            /* border-color: #999999; */
+            filter: brightness(60%);
+        }
+        .i-21 {
+            transform: rotate(20deg);
+            /* border-color: #b3b3b3; */
+            filter: brightness(70%);
+        }
+        .i-31 {
+            transform: rotate(0deg);
+            /* border-color: #cccccc; */
+            filter: brightness(80%);
+        }
+        .i-41 {
+            transform: rotate(-20deg);
+            /* border-color: #e6e6e6; */
+            filter: brightness(90%)
+        }
+        .i-51 {
+            transform: rotate(-40deg);
+            filter: brightness(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="div-one">
+        <div class="div-two">
+            <p class="gallery">
+                <img class="i-1" src="1-400x600.jpg">
+                <img class="i-2" src="2-400x600.jpg">
+                <img class="i-3" src="3-400x600.jpg">
+                <img class="i-4" src="4-400x600.jpg">
+                <img class="i-5" src="5-400x600.jpg">
+            </p>
+        </div>
+        <div class="div-two">
+            <p class="gallery">
+                <img class="i-11" src="1-400x600.jpg">
+                <img class="i-21" src="2-400x600.jpg">
+                <img class="i-31" src="3-400x600.jpg">
+                <img class="i-41" src="4-400x600.jpg">
+                <img class="i-51" src="5-400x600.jpg">
+            </p>
+        </div>
+    </div>   
+</body>
+</html>
