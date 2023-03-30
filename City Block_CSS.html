@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Block | CSS</title>
+    <style>
+        .full {
+            width: 900px;
+            height: 900px;
+            background-color: DimGray;
+            border: 5px solid LightCoral;
+        }
+        .houses {
+            width: 500px;
+            height: 200px;
+            display: inline-block;
+            background-color: antiquewhite;
+            
+            vertical-align: top;
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+        }
+        .houses_2 {
+            width: 200px;
+            height: 600px;
+            display: inline-block;
+            background-color: antiquewhite;
+
+            margin-top: -4px;
+            vertical-align: top;
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+        }
+        .street1 {
+            width: 100px;
+            height: 200px;
+            background-color: DimGray;
+            display: inline-block;
+            margin-left: -4px;
+            text-align: center;
+        }
+        .line {
+            width: 40px;
+            height: inherit;
+            border-right: 2px solid white;
+            border-left: 2px solid white;
+            display: inline-block;
+        }
+        .street_two {            
+            height: 100px;
+        }
+        .street2 {
+            width: 200px;
+            height: 100px;
+            background-color: DimGray;
+            display: inline-block;
+            margin-top: -4px;
+            vertical-align: top;
+        }
+        .street2-3 {
+            width: 200px;
+            height: 100px;
+            background-color: DimGray;
+            display: inline-block;
+            margin-top: -4px;
+            margin-left: -4px;
+            vertical-align: top;
+        }
+        .street2-2 {
+            width: 100px;
+            height: 100px;
+            background-color: DimGray;
+            display: inline-block;
+            margin-top: -4px;
+            margin-left: -4px;
+            vertical-align: top;
+        }
+        .street2-4 {
+            width: 100px;
+            height: 100px;
+            background-color: DimGray;
+            display: inline-block;
+            margin-top: -4px;
+            margin-left: -4px;
+            vertical-align: top;
+        }
+        .street2-5 {
+            width: 300px;
+            height: 100px;
+            background-color: DimGray;
+            display: inline-block;
+            margin-top: -4px;
+            margin-left: -4px;
+            vertical-align: top;
+        }
+        .line2 {
+            width: inherit;
+            height: 40px;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+            vertical-align: center;
+            margin: 4px 0;
+        }
+        .line21 {
+            width: inherit;
+            height: 40px;
+            border-top: 2px solid white;
+            border-bottom: 2px dashed  white;
+            vertical-align: center;
+            margin: 4px 0;
+        }
+        .line22 {
+            width: inherit;
+            height: 40px;
+            border-top: 2px dashed white;
+            border-bottom: 2px solid DimGray;
+            vertical-align: center;
+            margin: 4px 0;
+        }
+        .line2-4 {
+            width: inherit;
+            height: 40px;
+            border-top: 2px solid DimGray;
+            border-bottom: 2px dashed white;
+            vertical-align: center;
+            margin: 4px 0;
+        }
+        .line2-41 {
+            width: inherit;
+            height: 40px;
+            border-top: 2px dashed white;
+            border-bottom: 2px solid white;
+            vertical-align: center;
+            margin: 4px 0;
+        }
+        .street3 {
+            width: 100px;
+            height: 600px;
+            background-color: DimGray;
+            display: inline-block;
+            margin-left: -4px;
+            margin-top: -4px;
+
+            vertical-align: top;
+            text-align: center;
+        }
+        .line3 {
+            width: 40px;
+            height: inherit;
+            border-right: 2px solid white;
+            border-left: 2px solid white;
+            /* border-top: 2px solid white; */
+            display: inline-block;
+        }
+        .hospice {
+            width: 300px;
+            height: 200px;
+            background-color: Lavender;
+            display: inline-block;
+            margin-left: -4px;
+            vertical-align: top;
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+        }
+        .square {
+            width: 300px;
+            height: 300px;
+            background-color: GhostWhite;
+            
+            font-size: 150px;
+            text-align: center;
+            line-height: 300px;
+        }
+        .forest1 {
+            width: 300px;
+            height: 300px;
+            background-color: MediumSeaGreen;
+
+            font-size: 70px;
+            text-align: center;
+            line-height: 150px;
+            letter-spacing: 10px;
+        }
+        .forest2 {
+            width: 300px;
+            height: 600px;            
+            margin-left: -4px;
+            margin-top: -4px;
+            background-color: MediumSeaGreen;
+            display: inline-block;
+
+            font-size: 70px;
+            text-align: center;
+            line-height: 150px;
+            letter-spacing: 10px;
+        }
+        .park1 {
+            vertical-align: top;
+            display: inline-block; 
+            margin-left: -4px;
+            margin-top: -4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="full">
+        <div class="houses">
+            🏡🏡🏡
+        </div>
+        <div class="street1">
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="hospice">
+            🏥🏢
+        </div>
+
+        <div class="street_two">
+            <div class="street2">
+                <div class="line2"></div>
+                <div class="line2"></div>
+            </div>
+            <div class="street2-2">
+                <div class="line21"></div>
+                <div class="line22"></div>
+            </div>
+            <div class="street2-3">
+                <div class="line2"></div>
+                <div class="line2"></div>
+            </div>
+            <div class="street2-4">
+                <div class="line2-4"></div>
+                <div class="line2-41"></div>
+            </div>
+            <div class="street2-5">
+                <div class="line2"></div>
+                <div class="line2"></div>
+            </div>
+        </div>
+
+        <div class="houses_2">
+            🏡🏡🏡
+        </div>
+        <div class="street3">
+            <div class="line3"></div>
+            <div class="line3"></div>
+        </div>
+        <div class="park1">
+            <div class="square"> 
+                🗽
+            </div>
+            <div class="forest1"> 
+                🌳🌲🌳🌲🌳🌲
+            </div>
+        </div>
+        <div class="forest2">
+            🌲🌳🌲🌳🌲🌳🌲🌳🌲🌳🌲🌳
+        </div>
+
+    </div>
+</body>
+</html>
