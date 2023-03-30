@@ -1,268 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>City Block | CSS</title>
     <style>
-        .full {
-            width: 900px;
-            height: 900px;
-            background-color: DimGray;
-            border: 5px solid LightCoral;
+        .ta-c {
+            text-align: center;
         }
-        .houses {
+        .d-ib {
+            display: inline-block;
+        }
+        .va-t {
+            vertical-align: top;
+        }
+        .ml {
+            margin-left: -4px;
+        }
+        .mt {            
+            margin-top: -4px;
+        }
+        .m-4_0 {
+            margin: 4px 0;
+        }
+        .w-i {            
+            width: inherit;
+        }
+        .w-40 {
+            width: 40px;
+        }
+        .w-100 {
+            width: 100px;
+        }
+        .w-200 {
+            width: 200px;
+        }
+        .w-300 {
+            width: 300px;
+        }
+        .w-500 {
             width: 500px;
-            height: 200px;
-            display: inline-block;
-            background-color: antiquewhite;
-            
-            vertical-align: top;
-            font-size: 100px;
-            text-align: center;
-            line-height: 200px;            
-            letter-spacing: 15px;
         }
-        .houses_2 {
-            width: 200px;
-            height: 600px;
-            display: inline-block;
-            background-color: antiquewhite;
-
-            margin-top: -4px;
-            vertical-align: top;
-            font-size: 100px;
-            text-align: center;
-            line-height: 200px;
+        .w-900 {
+            width: 900px;            
         }
-        .street1 {
-            width: 100px;
-            height: 200px;
-            background-color: DimGray;
-            display: inline-block;
-            margin-left: -4px;
-            text-align: center;
-        }
-        .line {
-            width: 40px;
+        .h-i {
             height: inherit;
-            border-right: 2px solid white;
-            border-left: 2px solid white;
-            display: inline-block;
         }
-        .street_two {            
-            height: 100px;
-        }
-        .street2 {
-            width: 200px;
-            height: 100px;
-            background-color: DimGray;
-            display: inline-block;
-            margin-top: -4px;
-            vertical-align: top;
-        }
-        .street2-3 {
-            width: 200px;
-            height: 100px;
-            background-color: DimGray;
-            display: inline-block;
-            margin-top: -4px;
-            margin-left: -4px;
-            vertical-align: top;
-        }
-        .street2-2 {
-            width: 100px;
-            height: 100px;
-            background-color: DimGray;
-            display: inline-block;
-            margin-top: -4px;
-            margin-left: -4px;
-            vertical-align: top;
-        }
-        .street2-4 {
-            width: 100px;
-            height: 100px;
-            background-color: DimGray;
-            display: inline-block;
-            margin-top: -4px;
-            margin-left: -4px;
-            vertical-align: top;
-        }
-        .street2-5 {
-            width: 300px;
-            height: 100px;
-            background-color: DimGray;
-            display: inline-block;
-            margin-top: -4px;
-            margin-left: -4px;
-            vertical-align: top;
-        }
-        .line2 {
-            width: inherit;
+        .h-40 {
             height: 40px;
-            border-top: 2px solid white;
-            border-bottom: 2px solid white;
-            vertical-align: center;
-            margin: 4px 0;
         }
-        .line21 {
-            width: inherit;
-            height: 40px;
-            border-top: 2px solid white;
-            border-bottom: 2px dashed  white;
-            vertical-align: center;
-            margin: 4px 0;
+        .h-100 {
+            height: 100px;
         }
-        .line22 {
-            width: inherit;
-            height: 40px;
-            border-top: 2px dashed white;
-            border-bottom: 2px solid DimGray;
-            vertical-align: center;
-            margin: 4px 0;
-        }
-        .line2-4 {
-            width: inherit;
-            height: 40px;
-            border-top: 2px solid DimGray;
-            border-bottom: 2px dashed white;
-            vertical-align: center;
-            margin: 4px 0;
-        }
-        .line2-41 {
-            width: inherit;
-            height: 40px;
-            border-top: 2px dashed white;
-            border-bottom: 2px solid white;
-            vertical-align: center;
-            margin: 4px 0;
-        }
-        .street3 {
-            width: 100px;
-            height: 600px;
-            background-color: DimGray;
-            display: inline-block;
-            margin-left: -4px;
-            margin-top: -4px;
-
-            vertical-align: top;
-            text-align: center;
-        }
-        .line3 {
-            width: 40px;
-            height: inherit;
-            border-right: 2px solid white;
-            border-left: 2px solid white;
-            /* border-top: 2px solid white; */
-            display: inline-block;
-        }
-        .hospice {
-            width: 300px;
+        .h-200 {
             height: 200px;
-            background-color: Lavender;
-            display: inline-block;
-            margin-left: -4px;
-            vertical-align: top;
-            font-size: 100px;
-            text-align: center;
-            line-height: 200px;
+        }
+        .h-300 {
+            height: 300px;
+        }
+        .h-600 {
+            height: 600px;
+        }
+        .h-900 {
+            height: 900px;
+        }
+        .bgc-DimGray {
+            background-color: DimGray;
+        }
+        .b-city {
+            border: 10px solid LightCoral;
+        }
+        .bgc-h {
+            background-color: antiquewhite;
         }
         .square {
-            width: 300px;
-            height: 300px;
             background-color: GhostWhite;
-            
             font-size: 150px;
-            text-align: center;
             line-height: 300px;
-        }
-        .forest1 {
-            width: 300px;
-            height: 300px;
+        }        
+        .forest {
             background-color: MediumSeaGreen;
-
-            font-size: 70px;
-            text-align: center;
+            font-size: 70px;            
             line-height: 150px;
             letter-spacing: 10px;
+        }  
+        .f-h {
+            font-size: 100px;
+            line-height: 200px;
+            letter-spacing: 15px;
         }
-        .forest2 {
-            width: 300px;
-            height: 600px;            
-            margin-left: -4px;
-            margin-top: -4px;
-            background-color: MediumSeaGreen;
-            display: inline-block;
-
-            font-size: 70px;
-            text-align: center;
-            line-height: 150px;
-            letter-spacing: 10px;
+        .hospice {
+            background-color: Lavender;
+            font-size: 100px;
+            line-height: 200px;
+        } 
+        .b-rl-sw {
+            border-right: 2px solid white;
+            border-left: 2px solid white;
+        }   
+        .b-tb-sw {
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+        }  
+        .b-tb-sd-w {
+            border-top: 2px solid white;
+            border-bottom: 2px dashed white;
         }
-        .park1 {
-            vertical-align: top;
-            display: inline-block; 
-            margin-left: -4px;
-            margin-top: -4px;
+        .b-tb-ds-wd {
+            border-top: 2px dashed white;
+            border-bottom: 2px solid DimGray;
         }
+        .b-tb-sd-dw {
+            border-top: 2px solid DimGray;
+            border-bottom: 2px dashed white;
+        }
+        .b-tb-ds-w {
+            border-top: 2px dashed white;
+            border-bottom: 2px solid white;
+        }
+               
     </style>
 </head>
+
 <body>
-    <div class="full">
-        <div class="houses">
+    <div class="b-city w-900 h-900">
+        <div class="f-h d-ib ta-c va-t w-500 h-200 bgc-h">
             🏡🏡🏡
         </div>
-        <div class="street1">
-            <div class="line"></div>
-            <div class="line"></div>
+        <div class="d-ib ta-c ml w-100 h-200 bgc-DimGray">
+            <div class="b-rl-sw d-ib w-40 h-i"></div>
+            <div class="b-rl-sw d-ib w-40 h-i"></div>
         </div>
-        <div class="hospice">
+        <div class="hospice d-ib ta-c va-t ml w-300 h-200">
             🏥🏢
         </div>
 
-        <div class="street_two">
-            <div class="street2">
-                <div class="line2"></div>
-                <div class="line2"></div>
+        <div class="h-100">
+            <div class="d-ib va-t mt w-200 h-100 bgc-DimGray">
+                <div class="b-tb-sw va-t m-4_0 w-i h-40"></div>
+                <div class="b-tb-sw va-t m-4_0 w-i h-40"></div>
             </div>
-            <div class="street2-2">
-                <div class="line21"></div>
-                <div class="line22"></div>
+            <div class="d-ib va-t ml mt w-100 h-100 bgc-DimGray">
+                <div class="b-tb-sd-w va-t m-4_0 w-i h-40"></div>
+                <div class="b-tb-ds-wd va-t m-4_0 w-i h-40"></div>
             </div>
-            <div class="street2-3">
-                <div class="line2"></div>
-                <div class="line2"></div>
+            <div class="d-ib va-t ml mt w-200 h-100 bgc-DimGray">
+                <div class="b-tb-sw va-t m-4_0 w-i h-40"></div>
+                <div class="b-tb-sw va-t m-4_0 w-i h-40"></div>
             </div>
-            <div class="street2-4">
-                <div class="line2-4"></div>
-                <div class="line2-41"></div>
+            <div class="d-ib va-t ml mt w-100 h-100 bgc-DimGray">
+                <div class="b-tb-sd-dw va-t m-4_0 w-i h-40"></div>
+                <div class="b-tb-ds-w va-t m-4_0 w-i h-40"></div>
             </div>
-            <div class="street2-5">
-                <div class="line2"></div>
-                <div class="line2"></div>
+            <div class="d-ib va-t ml mt w-300 h-100 bgc-DimGray">
+                <div class="b-tb-sw va-t m-4_0 w-i h-40"></div>
+                <div class="b-tb-sw va-t m-4_0 w-i h-40"></div>
             </div>
         </div>
 
-        <div class="houses_2">
+        <div class="f-h d-ib ta-c va-t mt w-200 h-600 bgc-h">
             🏡🏡🏡
         </div>
-        <div class="street3">
-            <div class="line3"></div>
-            <div class="line3"></div>
+        <div class="d-ib ta-c va-t ml mt w-100 h-600 bgc-DimGray">
+            <div class="b-rl-sw d-ib w-40 h-i"></div>
+            <div class="b-rl-sw d-ib w-40 h-i"></div>
         </div>
-        <div class="park1">
-            <div class="square"> 
+        <div class="d-ib va-t ml mt">
+            <div class="square ta-c w-300 h-300">
                 🗽
             </div>
-            <div class="forest1"> 
+            <div class="forest ta-c w-300 h-300">
                 🌳🌲🌳🌲🌳🌲
             </div>
         </div>
-        <div class="forest2">
+        <div class="forest d-ib ta-c ml  mt w-300 h-600">
             🌲🌳🌲🌳🌲🌳🌲🌳🌲🌳🌲🌳
         </div>
 
     </div>
 </body>
+
 </html>
