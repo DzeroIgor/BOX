@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Box traffic Lights</title>
+    <style>
+        #light {
+            width: 100px;
+            height: 280px;
+            border-radius: 8px;
+            background-color: #333;
+            border: 2px solid #000000;
+            
+        }
+        .red-top {
+            width: 70px;
+            height: 70px;
+            background-color: #000000;
+            border-radius: 70px;
+            margin: 15px auto;
+        }
+        #light .red {
+            width: 70px;
+            height: 70px;
+            margin: 15px auto;
+            background-color: #ff0000;
+            
+            border-radius: 70px;
+            transform: translateY(7px);
+        }
+        .yellow-top {
+            width: 70px;
+            height: 70px;
+            background-color: #000000;
+            border-radius: 70px;
+            margin: 15px auto;
+        }
+        #light .yellow {
+            width: 70px;
+            height: 70px;
+            background-color: #ffd900;
+            border-radius: 70px;
+            margin: 15px auto;
+            transform: translateY(7px);
+        }
+
+        .green-top {
+            width: 70px;
+            height: 70px;
+            background-color: #000000;
+            border-radius: 70px;
+            margin: 15px auto;
+        }
+        #light .green {
+            width: 70px;
+            height: 70px;
+            background-color: #018f06;
+            border-radius: 70px;
+            margin: 15px auto;
+            transform: translateY(7px);
+        }
+
+        .pylon {
+            width: 20px;
+            height: 300px;
+            background-color: #222;
+            margin: 0 auto;
+        }
+        .all {
+            width: fit-content;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="all">
+        <div id="light">
+            <div class="red-top">
+                <div class="red"></div>
+            </div>
+            <div class="yellow-top">
+                <div class="yellow"></div>
+            </div>
+            <div class="green-top">
+                <div class="green"></div>
+            </div>
+        </div>
+        <div class="pylon"></div>
+    </div>
+
+</body>
+
+</html>
