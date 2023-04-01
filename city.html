@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City | Box</title>
+    <style>
+        body {
+            background-color: #20213d;
+        }
+
+        .street {
+            width: fit-content;
+            margin: auto;
+            /* border: 2px dashed #c6ff4b; */
+        }
+
+        .house {
+            /* border: 2px dashed #ff5e00; */
+            display: inline-block;
+        }
+
+        .horn {
+            width: fit-content;
+            transform: translateY(55px) translateX(-130px);
+        }
+
+        .top {
+            width: 50px;
+            height: 15px;
+            background-color: #9e6c4b;
+        }
+
+        .base {
+            width: 40px;
+            height: 60px;
+            background-color: #9e6c4b;
+            margin: auto;
+        }
+
+        .roof {
+            width: 0px;
+            height: 0px;
+            border: 180px solid #ffffff;
+            border-top-width: 0px;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: #9e6c4b;
+        }
+
+        .roof1 {
+            width: 0px;
+            height: 0px;
+            border: 150px solid #ffffff;
+            border-top-width: 0;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: #c6ff4b;
+            transform: translateY(-44px) translateX(-150px);
+            margin-bottom: 150px;
+        }
+
+        .block {
+            width: 300px;
+            height: 180px;
+            background-color: #c6ff4b;
+            margin: auto;
+        }
+
+        .bottom {
+            width: 300px;
+            height: 20px;
+            background-color: #5e412d;
+            margin: auto;
+        }
+
+        .door {
+            height: 150px;
+            width: 100px;
+            background-color: #9e6c4b;
+            border: 1px solid #5e412d;
+            transform: translateY(-72px) translateX(55px);
+            margin: auto;
+        }
+
+        .texture {
+            width: 80px;
+            height: 18px;
+            background-color: #bb825d;
+            margin: 10px auto;
+        }
+
+        .hand {
+            width: 15px;
+            height: 5px;
+            background-color: #583838;
+            border-radius: 10px;
+            transform: translateY(-77px) translateX(75px);
+        }
+
+        .window {
+            height: 98px;
+            width: 78px;
+            background-color: #9e6c4b;
+            border: 1px solid #5e412d;
+            transform: translateY(28px) translateX(35px);
+            text-align: center;
+        }
+
+        .glass-l {
+            width: 28px;
+            height: 39px;
+            background-image: linear-gradient(-50deg, #bdebff, #fff, #bdebff);
+            float: left;
+            margin: 7px 0 0 7px;
+        }
+
+        .glass-r {
+            width: 28px;
+            height: 39px;
+            background-image: linear-gradient(-50deg, #bdebff, #fff, #bdebff);
+            float: right;
+            margin: 7px 7px 0 0;
+        }
+
+        .build {
+            display: inline-block;
+            width: 400px;
+            height: fit-content;
+
+            margin: 0 30px;
+            /* border: 2px dotted #bdebff; */
+        }
+
+        .f-1 {
+            width: 80%;
+            height: 15px;
+            margin: auto;
+            background-color: #a0a0a0;
+        }
+
+        .f-2 {
+            width: inherit;
+            height: 15px;
+            background-color: #505050;
+        }
+
+        .level-1 {
+            width: 360px;
+            height: 200px;
+            background-color: #bb825d;
+            border: 1px solid #505050;
+            margin: auto;
+        }
+
+        .b-door {
+            width: 90px;
+            height: 160px;
+            background-color: #593f14;
+            border-radius: 100px 100px 0 0;
+            float: left;
+            margin: 25px 0 0 22px;
+        }
+
+        .b-window {
+            width: 90px;
+            height: 110px;
+            background-color: #593f14;
+            float: left;
+            margin: 25px 0 0 22px;
+        }
+
+        .b-glass {
+            width: 70px;
+            height: 30px;
+            background-image: linear-gradient(-50deg, #bdebff, #fff, #bdebff);
+            float: left;
+            margin: 10px 10px 0;
+        }
+
+        .b-glass-2 {
+            width: 70px;
+            height: 50px;
+            background-image: linear-gradient(-50deg, #bdebff, #fff, #bdebff);
+            float: left;
+            margin: 10px 10px 0;
+        }
+
+        .shad {
+            width: inherit;
+            height: 15px;
+            background-color: #3c3636;
+        }
+
+        .shad-1 {
+            width: 360px;
+            height: 15px;
+            margin: auto;
+            border: 1px solid #505050;
+            background-color: #3c3636;
+        }
+
+        .level-2 {
+            width: 360px;
+            height: 200px;
+            background-color: #8cd6e4;
+            border: 1px solid #505050;
+            margin: auto;
+        }
+
+        .wind-3 {
+            width: 131px;
+            height: 110px;
+            background-color: #0f52b1;
+            float: left;
+            margin: 25px 0 0 34px;
+        }
+
+        .wind-g3 {
+            width: 37px;
+            height: 100px;
+            background-image: linear-gradient(-50deg, #bdebff, #fff, #bdebff);
+            float: left;
+            margin: 5px 0 0 5px;
+        }
+
+        .center-b {
+            height: 185px;
+            width: 120px;
+            float: left;
+            background-color: #ffffff;
+        }
+
+        .level-22 {
+            width: 120px;
+            height: 185px;
+            background-color: #8cd6e4;
+            /* border: 1px solid #505050; */
+            float: left;
+        }
+
+        .level-3 {
+            border: 1px solid #505050;
+            height: 185px;
+            width: fit-content;
+            margin: auto;
+        }
+
+        .b-window-3 {
+            width: 80px;
+            height: 110px;
+            background-color: #0f52b1;
+            float: left;
+            margin: 25px 0 0 20px;
+        }
+
+        .b-glass-3 {
+            width: 70px;
+            height: 30px;
+            background-image: linear-gradient(-50deg, #bdebff, #fff, #bdebff);
+            float: left;
+            margin: 5px 5px 0;
+        }
+
+        .b-glass-4 {
+            width: 70px;
+            height: 65px;
+            background-image: linear-gradient(-50deg, #bdebff, #fff, #bdebff);
+            float: left;
+            margin: 5px 5px 0;
+        }
+
+        .shad-2 {
+            width: 130px;
+            height: inherit;
+            margin: auto;
+            border: 1px solid #ffffff;
+            background-color: #ffffff;
+        }
+
+        .moon {
+            width: 90px;
+            height: 90px;
+            display: inline-block;
+            background-color: #e1d5a9;
+            border-radius: 90px;
+            vertical-align: top;
+            margin-left: 50px;
+        }
+
+        .moon-2 {
+            width: 65px;
+            height: 65px;
+            display: inline-block;
+            background-color: #20213d;
+            border-radius: 90px;
+        }
+
+        .road {
+            height: 50px;
+            width: 100%;
+            background-color: #222222;
+            margin-top: -4px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="street">
+        <div class="house">
+            <div class="roof">
+                <div class="horn">
+                    <div class="top"></div>
+                    <div class="base"></div>
+                </div>
+                <div class="roof1"></div>
+            </div>
+            <div class="block">
+                <div class="window">
+                    <div class="glass-l"></div>
+                    <div class="glass-r"></div>
+                    <div class="glass-l"></div>
+                    <div class="glass-r"></div>
+                </div>
+                <div class="door">
+                    <div class="texture"></div>
+                    <div class="texture"></div>
+                    <div class="texture"></div>
+                    <div class="texture"></div>
+                    <div class="texture"></div>
+                    <div class="hand"></div>
+                </div>
+            </div>
+            <div class="bottom"></div>
+        </div>
+
+        <!-- first build -->
+
+        <div class="build">
+            <div class="f-1"></div>
+            <div class="f-2"></div>
+            <div class="level-1">
+                <div class="shad"></div>
+                <div class="b-window">
+                    <div class="b-glass"></div>
+                    <div class="b-glass-2"></div>
+                </div>
+                <div class="b-window">
+                    <div class="b-glass"></div>
+                    <div class="b-glass-2"></div>
+                </div>
+                <div class="b-window">
+                    <div class="b-glass"></div>
+                    <div class="b-glass-2"></div>
+                </div>
+            </div>
+            <div class="f-2"></div>
+            <div class="level-1">
+                <div class="shad"></div>
+                <div class="b-window">
+                    <div class="b-glass"></div>
+                    <div class="b-glass-2"></div>
+                </div>
+                <div class="b-window">
+                    <div class="b-glass"></div>
+                    <div class="b-glass-2"></div>
+                </div>
+                <div class="b-window">
+                    <div class="b-glass"></div>
+                    <div class="b-glass-2"></div>
+                </div>
+            </div>
+            <div class="f-2"></div>
+            <div class="level-1">
+                <div class="shad"></div>
+                <div class="b-window">
+                    <div class="b-glass"></div>
+                    <div class="b-glass-2"></div>
+                </div>
+                <div class="b-window">
+                    <div class="b-glass"></div>
+                    <div class="b-glass-2"></div>
+                </div>
+                <div class="b-window">
+                    <div class="b-glass"></div>
+                    <div class="b-glass-2"></div>
+                </div>
+            </div>
+            <div class="f-2"></div>
+            <div class="level-1">
+                <div class="shad"></div>
+                <div class="b-door"></div>
+                <div class="b-door"></div>
+                <div class="b-door"></div>
+            </div>
+            <div class="f-2"></div>
+        </div>
+
+        <!-- second build -->
+
+        <div class="build">
+            <div class="f-1"></div>
+            <div class="f-2">
+            </div>
+            <div class="shad-1">
+                <div class="shad-2"></div>
+            </div>
+            <div class="level-3">
+                <div class="level-22">
+                    <div class="b-window-3">
+                        <div class="b-glass-3"></div>
+                        <div class="b-glass-4"></div>
+                    </div>
+                </div>
+                <div class="center-b">
+                    <div class="b-window-3">
+                        <div class="b-glass-3"></div>
+                        <div class="b-glass-4"></div>
+                    </div>
+                </div>
+                <div class="level-22">
+                    <div class="b-window-3">
+                        <div class="b-glass-3"></div>
+                        <div class="b-glass-4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="f-2">
+                <div class="shad-2"></div>
+            </div>
+            <div class="shad-1">
+                <div class="shad-2"></div>
+            </div>
+            <div class="level-3">
+                <div class="level-22">
+                    <div class="b-window-3">
+                        <div class="b-glass-3"></div>
+                        <div class="b-glass-4"></div>
+                    </div>
+                </div>
+                <div class="center-b">
+                    <div class="b-window-3">
+                        <div class="b-glass-3"></div>
+                        <div class="b-glass-4"></div>
+                    </div>
+                </div>
+                <div class="level-22">
+                    <div class="b-window-3">
+                        <div class="b-glass-3"></div>
+                        <div class="b-glass-4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="f-2">
+                <div class="shad-2"></div>
+            </div>
+            <div class="level-2">
+                <div class="shad">
+
+                </div>
+                <div class="wind-3">
+                    <div class="wind-g3"></div>
+                    <div class="wind-g3"></div>
+                    <div class="wind-g3"></div>
+                </div>
+                <div class="wind-3">
+                    <div class="wind-g3"></div>
+                    <div class="wind-g3"></div>
+                    <div class="wind-g3"></div>
+                </div>
+            </div>
+            <div class="f-2"></div>
+        </div>
+
+        <div class="moon">
+            <div class="moon-2"></div>
+        </div>
+        <div class="road"></div>
+    </div>
+</body>
+
+</html>
