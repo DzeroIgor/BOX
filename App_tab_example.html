@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App tab example | Pseudo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+        .m-a {
+            margin: auto;
+        }
+        .w-fc {
+            width: fit-content;
+        }
+        .b-r {
+            border: 1px solid #ff0000;
+        }
+        .c-image {
+            width: fit-content;
+            margin: auto;
+            margin-top: 110px;
+            margin-bottom: 35px;
+        }
+        .g-image {
+            width: 280px;
+        } 
+        .i-box {            
+            max-width: 500px;
+        }    
+        .search {
+            width: 500px;
+            height:45px;
+            margin: 0;
+            border-radius: 40px;
+            border-style: none;
+            padding: 0 50px;
+            box-shadow: 0 0 5px 0 #bdbdbd;
+            outline: none;
+            background-image: url('https://i0.wp.com/www.thinkafrica.fi/wp-content/uploads/2019/04/search-icon.png?w=1200&ssl=1');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 15px;
+        }
+        ::placeholder {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: #101010;
+        }
+        .mic {
+            display: inline-block;
+            width: 15px;
+            transform: translateX(-20px);
+        }
+        .tabs {
+            list-style: none;
+            /* border: 1px solid #ce1a1a; */
+            padding: 0;
+        }
+        .tabs-item {
+            display: inline-block;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;            
+            width: 110px;
+            height: 110px;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .tabs-item:hover {
+            background-color: #e5e7e8;
+        }
+        .tabs-link {
+            text-decoration: none;
+            color: #575757;
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            letter-spacing: 0.3px;
+        }
+        .con-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 30px;
+            background-color: #f2f2f2;
+            margin: 16px auto;
+        }
+        .tabs-img {
+            width: 30px;
+            margin: 9px auto;
+        }
+        .setting {
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            background-color: #d9d9d9;
+            background-image: url("https://cdn-icons-png.flaticon.com/128/8212/8212730.png");
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            float: right;
+            margin: 3px 3px -3px -3px;
+            opacity: 0.0;
+            transition: 1s;
+        }
+        .setting:hover {            
+            opacity: 1.0;
+        }
+
+        .top {
+            text-align: right;
+        }
+        .top-items {
+            list-style: none;
+            /* border: 1px solid #ce1a1a; */
+            padding: 0;
+        }
+        .top-list {
+            display: inline-block;
+            margin: 0;
+            padding: 0 2px 0 13px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .menu {
+            width: 35px;
+            height: 35px;
+            border-radius: 30px;
+            background-color: #ffffff;
+            background-image: url("https://cdn1.iconfinder.com/data/icons/ui-basic-14/24/grip-dotted-horizontal-512.png");
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-position: center;
+            float: right;
+        }
+        .menu:hover {            
+            background-color: #eaeaea;
+        }
+        .line:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <ul class="top-items">
+            <li class="top-list">
+                <a href="https://mail.google.com" class="tabs-link line" target="_blank">
+                    Gmail
+                </a>
+            </li>
+            <li class="top-list">
+                <a href="https://www.google.md/imghp?hl=en&tab=ri&ogbl" class="tabs-link line" target="_blank">
+                    Images
+                </a>
+            </li>
+            <li class="top-list">
+                <a href="https://about.google/products/" class="tabs-link" target="_blank">
+                    <div class="menu"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <form action="https://www.google.com/search">
+        <div class="c-image">
+            <img class="g-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1280px-Google_2015_logo.svg.png"
+                alt="google logo">
+        </div>
+        <div class="m-a i-box">
+            <input 
+            class="search m-a" 
+            type="search" 
+            name="q" 
+            required 
+            pattern="[A-Za-z \s]{3,}" 
+            placeholder="Search Google or type a URL"
+            />
+            <!-- <img class="mic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/1200px-Google_mic.svg.png"> -->
+        </div>        
+    </form>
+
+    <div class="m-a w-fc">
+        <ul class="tabs">
+            <!-- <li class="tabs-item">
+                <a href="https://www.google.com/" class="tabs-link" target="_blank">
+                    <div class="con-img">
+                        <img class="tabs-img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/882px-Google_%22G%22_Logo.svg.png?20230305195327">
+                    </div>
+                    Google
+                </a>
+            </li> -->
+            <li class="tabs-item">
+                <div class="setting"></div>
+                <a href="https://github.com/" class="tabs-link" target="_blank">
+                    <div class="con-img">
+                        <img class="tabs-img"
+                            src="https://cdn-icons-png.flaticon.com/512/25/25231.png">
+                    </div>
+                    GitHub
+                </a>
+            </li>
+            <li class="tabs-item">
+                <div class="setting"></div>
+                <a href="https://www.w3schools.com/" class="tabs-link" target="_blank">
+                    <div class="con-img">
+                        <img class="tabs-img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/W3Schools_logo.svg/1088px-W3Schools_logo.svg.png">
+                    </div>
+                    W3Schools
+                </a>
+            </li>
+            <li class="tabs-item">
+                <div class="setting"></div>
+                <a href="https://www.freecodecamp.org/learn/" class="tabs-link" target="_blank">
+                    <div class="con-img">
+                        <img class="tabs-img"
+                            src="https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/freecodecamp-512.png">
+                    </div>
+                    freecodecamp
+                </a>
+            </li>
+            <li class="tabs-item">
+                <a href="https://www.freecodecamp.org/learn/" class="tabs-link" target="_blank">
+                    <div class="con-img">
+                        <img class="tabs-img"
+                            src="https://icons.veryicon.com/png/o/miscellaneous/o2o-middle-school-project/plus-104.png">
+                    </div>
+                    Add shortcut
+                </a>
+            </li>
+        
+        </ul>
+    </div>
+</body>
+</html>
