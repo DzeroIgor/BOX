@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>MENU</title>
+    <style>
+        body {
+            background-color: #cce0ff;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-top: 0;
+        }
+        .menu-nav {
+            width: 250px;
+            margin: auto;
+            margin-top: -375px;
+            /* display: none; */
+        }
+        .menu-nav:target {
+            margin-top: 0;
+            /* display: block; */
+            transition: 2s;
+        }
+        .menu-title {
+            font-weight: 700;
+            font-size: 28px;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            
+            background-color: #33567a;
+        }
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li:first-child {
+            border-top: 1px solid #cce0ff;
+        }        
+        a {
+            display: block;
+            font-weight: 100;
+            font-size: 22px;
+            text-decoration: none;
+            color: #ffffff;
+            padding: 15px 0;
+            margin: 0;
+            border-bottom: 1px solid #cce0ff;
+            background-color: #33567a;
+        }
+        .menu-list a:hover {
+            background-color: #274869;
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            color: #f5f5f5;
+            font-size: 23px;
+        }
+        a::before {
+            content: "✔";        
+            color: #007800;
+            padding: 0 20px 0 20px;
+        } 
+        a::before:hover {
+            content: "✔";        
+            color: #6fd36f;
+        } 
+        .over::before {
+            content: "✘";
+            color: #ff0000;
+        }
+        .over::before:hover {
+            content: "✘";
+            color: #ff3f3f;
+        }
+        .menu-button a::before {
+            display: none;
+        }
+        .menu-button a {
+            margin: auto;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+            font-weight: 700;
+            border-radius: 100px;
+            padding: 0;
+            margin-top: 5px;
+        }
+        .menu-button a:hover {
+            border: 2px solid #fff;
+            margin-top: 3px;
+            background-color: #274869;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu-nav" id="menu">
+        <h2 class="menu-title">Our Cousine</h2>
+        <ul class="menu-list">
+            <li>
+                <a href="#">Salad</a>
+            </li>
+            <li>
+                <a href="#">Soup</a>
+            </li>
+            <li>
+                <a href="#">Pizza</a>
+            </li>
+            <li>
+                <a href="#" class="over">Kebab</a>
+            </li>
+            <li>
+                <a href="#">Burger</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="menu-button"><a href="#menu">MENU</a></div>
+</body>
+</html>

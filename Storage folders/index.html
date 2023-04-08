@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folders</title>
+    <style>
+        body {
+            background-color: #1b1b24;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        #top {
+            display: none;
+        }
+
+        #top:target {
+            display: block;
+        }
+
+        #bottom {
+            display: none;
+        }
+
+        #bottom:target {
+            display: block;
+        }
+
+        .tree {
+            margin-top: 20px;
+            margin-left: 20px;
+            display: inline-block;
+            color: #fff;
+            font-size: 70px;
+            list-style-type: "┠";
+            /* border: 1px solid #f28c8c; */
+        }
+
+        .list {
+            color: #fff;
+            font-size: 70px;
+            list-style-type: "┠";
+            margin-top: 25px;
+        }
+
+        .folder {
+            background-image: url(image/files-and-folders.png);
+            background-repeat: no-repeat;
+            padding: 24px 0 24px 72px;
+            /* border: 1px solid #f28c8c; */
+        }
+
+        .file {
+            background-image: url(image/document.png);
+            background-repeat: no-repeat;
+            padding: 24px 0 24px 72px;
+            /* border: 1px solid #f28c8c; */
+        }
+
+        .name {
+            font-size: 20px;
+        }
+
+        .name:hover {
+            color: #ff6666;
+        }
+
+        .folder:last-child,
+        .file:last-child {
+            list-style-type: "┖";
+        }
+
+        .folder:first-child:hover,
+        .folder:nth-child(2):hover {
+            background-image: url(image/data-storage.png);
+            color: #ffb9b9;
+            cursor: pointer;
+            filter: brightness(0.95);
+        }
+
+        .folder:last-child:hover {
+            color: #ffb9b9;
+            cursor: pointer;
+            filter: brightness(0.95);
+        }
+
+        .empty {
+            background-image: url(image/empty-folder.png);
+        }
+
+        .pdf {
+            background-image: url(image/pdf-file.png);
+        }
+
+        .doc {
+            background-image: url(image/job-opportunities.png);
+        }
+
+        .jpg {
+            background-image: url(image/jpg-file.png);
+        }
+
+        .back {
+            background-image: url(image/back.png);
+            background-size: 54px;
+            background-position: 5px center;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="tree">
+        <li class="folder">
+            <div class="name">
+                <span><a href="#top">Ex. Project</a></span>
+                <div class="top" id="top">
+                    <ul class="list">
+                        <li class="file back">
+                            <div class="name">
+                                <a href="#">back</a>
+                            </div>
+                        </li>
+                        <li class="file pdf">
+                            <div class="name">
+                                pdf_example.pdf
+                            </div>
+                        </li>
+                        <li class="file doc">
+                            <div class="name">
+                                cv_example.doc
+                            </div>
+                        </li>
+                        <li class="file">
+                            <div class="name">
+                                doc_example.doc
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li class="folder">
+            <div class="name">
+                <span><a href="#bottom">Pr. Project</a></span>
+                <div class="top" id="bottom">
+                    <ul class="list">
+                        <li class="file back">
+                            <div class="name">
+                                <a href="#">back</a>
+                            </div>
+                        </li>
+                        <li class="file">
+                            <div class="name">
+                                doc_example.doc
+                            </div>
+                        </li>
+                        <li class="file pdf">
+                            <div class="name">
+                                pdf_example.pdf
+                            </div>
+                        </li>
+                        <li class="file doc">
+                            <div class="name">
+                                cv_example.doc
+                            </div>
+                        </li>
+                        <li class="file jpg">
+                            <div class="name">
+                                jpg_example.pdf
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li class="folder empty one">
+            <div class="name">
+                <a href="#">Ft. Project</a>
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>
