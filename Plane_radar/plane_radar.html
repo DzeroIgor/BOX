@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Plane radar</title>
+    <style>
+        body {
+            background-color: #010204;
+        }
+        .all {
+           width: 600px;
+            height: 600px;
+            margin: 100px auto; 
+        }
+        .plane-container {
+            width: 600px;
+            height: 600px;
+            margin: auto;
+            border-radius: 50%;
+            background-image: conic-gradient(#00000000, #00ff11);
+            /* scale: 0.1; */            
+            animation: rotate 8s linear infinite;
+        }
+        .plane-one {
+            position: absolute;
+            width: 50px;
+            animation: plane-one 7s linear infinite;
+            animation-delay: 0;
+        }
+        .plane-two {
+            position: absolute;
+            width: 50px;
+            animation: plane-two 7s linear infinite;
+            animation-delay: 2s;            
+        }
+        .plane-three {
+            position: absolute;
+            width: 50px;
+            animation: plane-three 7s linear infinite;
+            animation-delay: -1s;
+        }
+        .plane-four {
+            position: absolute;
+            width: 50px;
+            animation: plane-four 7s linear infinite;
+            animation-delay: 3s;
+        }
+        @keyframes rotate {
+            100% {transform: rotate(360deg);}            
+        }
+        @keyframes plane-one {
+            0% {transform: translate(0px, 0px) rotate(0deg);}
+            100% {transform: translate(550px, -550px) rotate(0deg);}            
+        }
+        @keyframes plane-two {
+            0% {transform: translate(350px, 0px) rotate(-90deg);}
+            100% {transform: translate(-100px, -450px) rotate(-90deg);}            
+        }
+        @keyframes plane-three {
+            0% {transform: translate(400px, -650px) rotate(135deg);}
+            100% {transform: translate(400px, 0px) rotate(135deg);}            
+        }
+        @keyframes plane-four {
+            0% {transform: translate(50px, -550px) rotate(90deg);}
+            100% {transform: translate(550px, -50px) rotate(90deg);}            
+        }
+        .line {
+            width: calc(100% - 95px);
+            height: calc(100% - 95px);
+            position: relative;
+            top: 50%;
+            left: 50%;  
+            transform: translate(-50%, -50%); 
+            border-radius: 50%;
+            border: 2px solid #00ff1149;
+        }
+        .h-line {
+            width: 600px;
+            height: 2px;
+            background-color: #00ff1149;
+            top: 50%;
+            transform: translate(-0%, -303px); 
+        }
+        .hv-line {
+            width: 600px;
+            height: 2px;
+            background-color: #00ff1149;
+            top: 50%;
+            transform: translate(-0%, -305px) rotate(45deg); 
+        }
+        .v-line {
+            width: 600px;
+            height: 2px;
+            background-color: #00ff1149;
+            top: 50%;
+            transform: translate(0%, -301px) rotate(90deg); 
+        }
+        .vh-line {
+            width: 600px;
+            height: 2px;
+            background-color: #00ff1149;
+            top: 50%;
+            transform: translate(0%, -307px) rotate(-45deg); 
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="plane-container">
+            <div class="line">
+                <div class="line">
+                    <div class="line">
+                        <div class="line">
+                            <div class="line">
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="v-line"></div>
+        <div class="h-line"></div>
+        <div class="hv-line"></div>
+        <div class="vh-line"></div>
+        <img class="plane-one" src="flight-plane.svg">
+        <img class="plane-two" src="flight-plane.svg">
+        <img class="plane-three" src="flight-plane.svg">
+        <img class="plane-four" src="flight-plane.svg">
+    </div>
+</body>
+</html>
