@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            background-color: #010204;
+            width: 100%;
+            height: 100%;
+        }
+        .image-effect {
+           width: 600px;
+            height: 400px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            border: 5px solid #fff;
+            background-image: url(3-600x400-g.jpg);
+        }
+        .effect {
+            height: 400px;
+            width: calc(100% - 50%);
+            border-right: 3px solid #fff;
+            background-image: url(3-600x400.jpg);
+            transition: 4s linear;
+        }
+        
+        .image-effect .effect a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            font-size: 25px;
+            transform: translate(281px, 177px);
+            transition: 4s linear;
+            letter-spacing: -6px;
+        }
+        #right:target .effect {
+            width: 550px;            
+        }
+        #left:target .effect {
+            width: 50px;            
+        }
+        #right:target a {
+            transform: translate(531px, 177px);            
+        }
+        #left:target a {
+            transform: translate(31px, 177px);            
+        }
+    </style>
+</head>
+<body>
+    <div id="right">        
+        <div id="left">                
+            <div class="image-effect">
+                <div class="effect">
+                    <a href="#left">◀</a>
+                    <a href="#right">▶</a>
+                </div>
+            </div>                
+        </div>        
+    </div>
+</body>
+</html>

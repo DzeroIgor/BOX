@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            background-color: #010204;
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-effect {
+            width: 400px;
+            height: 600px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 10%);
+            border: 5px solid #ffb700;
+            background-image: url(6-400x600-g.jpg);
+        }
+
+        .effect {
+            width: 400px;
+            height: calc(100% - 50%);
+            border-bottom: 2px solid #35000054;
+            background-image: url(6-400x600.jpg);
+            transition: 4s linear;
+        }
+
+        .image-effect .effect a {
+            display: block;
+            text-decoration: none;
+            color: #ffb700;
+            font-size: 25px;
+            line-height: 17.5px;
+            transform: translate(190px, 284px);
+            transition: 4s linear;
+        }
+
+        #top:target .effect {
+            height: 40px;
+        }
+
+        #bottom:target .effect {
+            height: 550px;
+        }
+
+        #top:target a {
+            transform: translate(190px, 24px);
+        }
+
+        #bottom:target a {
+            transform: translate(190px, 534px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top">
+        <div id="bottom">
+            <div class="image-effect">
+                <div class="effect">
+                    <a href="#top">▲</a>
+                    <a href="#bottom">▼</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
