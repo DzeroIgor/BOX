@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Selectors | Cinema</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #ff9900;
+            font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+        }   
+        .vip span {
+            display: inline-block;
+            vertical-align: top;
+            width: 72px;
+            height: 72px;
+            margin: 0 2px;
+            color: #ff0000;
+            font-weight: bold;
+            background-image: url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Cyan-Seat-icon.png);
+        }
+        .vip span:nth-child(3) {
+            margin-right: 72px;
+        }
+        .main span {
+            display: inline-block;
+            vertical-align: top;
+            width: 72px;
+            height: 72px;
+            margin: 0 2px;
+            background-image: url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Magenta-Seat-icon.png);
+        }
+        .main span:nth-child(4) {
+            margin-right: 72px;
+        }
+        .front span {
+            display: inline-block;
+            vertical-align: top;
+            width: 72px;
+            height: 72px;
+            margin: 0 2px;
+            color: #000;
+            background-image: url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Orange-Seat-icon.png);
+        }
+        .front span:nth-child(3) {
+            margin-right: 72px;
+        }
+        span:hover {
+            filter: invert(.1);
+            color: antiquewhite;
+        }
+        .vip, .main, .front {
+            margin-bottom: 25px;
+        }
+        .row-one, .row-two, .row-three {
+            margin-bottom: 20px;
+        }
+        .front span:nth-child(3)::before, 
+        .front span:first-child::before, 
+        .front span:nth-child(5)::before, 
+        .vip span:nth-child(5)::before,        
+        .row-two span:first-child:before, 
+        .row-one span:nth-child(4):before, 
+        .row-two span:nth-child(5):before, 
+        .row-three span:nth-child(3):before, 
+        .row-three span:last-child:before {
+            content: "";
+            display: block;
+            margin: auto;
+            width: 72px;
+            height: 72px;
+            margin-top: -8px;
+            background-image: url(https://img.icons8.com/color/72/null/woman-skin-type-1.png);
+        }
+        .front span:nth-child(2)::before, 
+        .front span:last-child::before, 
+        .vip span:nth-child(4)::before,
+        .vip span:nth-child(2)::before,
+        .row-two span:nth-child(3):before, 
+        .row-one span:nth-child(5):before, 
+        .row-two span:nth-child(7):before, 
+        .row-three span:nth-child(5):before,        
+        .row-two span:nth-child(3):before, 
+        .row-one span:nth-child(5):before, 
+        .row-two span:nth-child(7):before, 
+        .row-three span:nth-child(5):before {
+            content: "";
+            display: block;
+            margin: auto;
+            width: 72px;
+            height: 72px;
+            margin-top: -8px;
+            background-image: url(https://img.icons8.com/color/72/null/standing-man.png);
+        }
+    </style>
+</head>
+<body>
+    <h1>Advanced Selectors <br> Cinema</h1>
+    <div class="cinema">
+        <div class="vip">
+            <div class="row"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
+        </div>
+        <div class="main">
+            <div class="row-one"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div>
+            <div class="row-two"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div>
+            <div class="row-three"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div>
+        </div>
+        <div class="front">
+            <div class="row"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
+        </div>
+    </div>
+</body>
+</html>
