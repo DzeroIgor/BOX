@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drop-down Menu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+        body{
+            background-color: #4e4e4e;
+            font-family: 'Roboto', sans-serif;
+        }
+        .center {
+            margin: auto;
+            width: fit-content;
+            height: 236px;
+            padding: 50px;
+            background-color: #3a3a3a;
+        }
+        .block {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 10px;           
+        }
+        nav {
+            width: fit-content;
+            margin: 50px auto 0;
+            background-color: #fff;
+        }
+        nav label {
+            display: inline-block;
+            user-select: none;
+            cursor: pointer;
+            background-color: #b7b7b7;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #262626;
+            box-shadow: 0 0 5px #4e4e4e;            
+        }
+        nav .red {
+            background-color: #ff7676;
+            box-shadow: 0 0 5px #962e2e;      
+            color: #562424;      
+        }
+        nav label::after {
+            content: "";
+            display: inline-block;
+            background: url(https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-down-01-1024.png) no-repeat center;
+            background-size: 20px;
+            width: 20px;
+            height: 20px;
+            margin-left: 50px;
+            margin-bottom: -5px;
+        }
+        nav input:checked + label::after {
+            content: "";
+            background-image: url(https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-up-01-1024.png);
+            margin-bottom: -5px;
+        }
+        nav label::after:hover {
+            filter: brightness(1);
+        }
+        nav input {
+            display: none;
+        }
+        nav ul {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            width: fit-content;
+            margin: auto;
+        }
+        nav input:checked+label+ul {
+            display: block;
+        }
+        a {
+            display: inline-block;
+            width: 135px;
+            background-color: #ececec;
+            text-decoration: none;
+            color: #3a3a3a;
+            padding: 10px 20px;
+            box-shadow: 0 1px 1px #7f7f7f inset;
+        }
+        a:hover {
+            background-color: #a0a0a0;
+            color: #ffffff;      
+            box-shadow: 0 1px 1px #7f7f7f inset;      
+        }
+        .one a {
+            background-color: #ffa0a0;
+            color: #562424;
+            box-shadow: 0 1px 1px #962e2e inset;
+        }
+        .one a:hover {
+            background-color: #f86363;
+            color: #ffffff;      
+            box-shadow: 0 1px 1px #962e2e inset;      
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="center">
+            <div class="block">
+                <input type="checkbox" id="toggler" />
+                <label for="toggler">Dropdown</label>
+                <ul>
+                    <li><a href="">Item 1</a></li>
+                    <li><a href="">Item 2</a></li>
+                    <li><a href="">Item 3</a></li>
+                    <li><a href="">Item 4</a></li>
+                    <li><a href="">Item 5</a></li>
+                </ul>
+            </div>
+            <div class="block">
+                <input type="checkbox" id="toggler-one" />
+                <label for="toggler-one" class="red">Dropdown</label>
+                <ul class="one">
+                    <li><a href="">Item 6</a></li>
+                    <li><a href="">Item 7</a></li>
+                    <li><a href="">Item 8</a></li>
+                    <li><a href="">Item 9</a></li>
+                    <li><a href="">Item 10</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
