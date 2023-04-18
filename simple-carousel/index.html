@@ -1,0 +1,75 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Simple Carousel</title>
+    <style>
+        body {
+            background-color: #345;
+        }
+        .carousel {
+            width: 900px;
+            height: 436px;
+            margin: 100px auto 0;
+            overflow: hidden;
+            box-shadow: 0 0 5px 2px #1f2b37;
+        }
+        .carousel .slide {
+            width: 2700px;
+            transform: translateX(-900px);
+            transition: 1s;
+        }
+        img {
+            width: 300px;
+        }
+        .carousel #left:target .slide {
+            transform: translateX(0);
+        }
+        .carousel #center:target .slide {
+            transform: translateX(-900px);
+        }
+        .carousel #right:target .slide {
+            transform: translateX(-1800px);
+        }
+        .carousel .sources {
+            text-align: center;
+        }
+        .sources a {
+            color: #fff;
+            font-size: 45px;
+            padding: 0 20px;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+        .sources {
+            width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .sources a:hover {
+            color: #1f2b37;
+        }
+        .sources a:first-child, .sources a:last-child {
+            font-size: 30px;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="carousel">
+        <div id="left">
+            <div id="center">
+                <div id="right">
+                    <div class="slide">
+                        <img src="1-550x800.jpg" alt=""><img src="2-550x800.jpg" alt=""><img src="3-550x800.jpg" alt=""><img src="4-550x800.jpg" alt=""><img src="5-550x800.jpg" alt=""><img src="6-550x800.jpg" alt=""><img src="7-550x800.jpg" alt=""><img src="8-550x800.jpg" alt=""><img src="9-550x800.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class="sources">
+        <a href="#left">◀</a><a href="#center">◆</a><a href="#right">►</a>
+    </div>
+ </body>
+ </html>
